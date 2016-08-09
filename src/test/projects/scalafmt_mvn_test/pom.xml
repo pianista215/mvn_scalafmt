@@ -12,9 +12,17 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>com.geirsson</groupId>
+                <groupId>com.devsmobile</groupId>
                 <artifactId>mvn-scalafmt</artifactId>
                 <version>1.0.0</version>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>format</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
