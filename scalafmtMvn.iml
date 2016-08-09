@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.apache.maven:maven-plugin-api:3.3.9" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven:maven-model:3.3.9" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-utils:3.0.22" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven:maven-artifact:3.3.9" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.sisu:org.eclipse.sisu.plexus:0.3.2" level="project" />
+    <orderEntry type="library" name="Maven: javax.enterprise:cdi-api:1.0" level="project" />
+    <orderEntry type="library" name="Maven: javax.annotation:jsr250-api:1.0" level="project" />
+    <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.sisu:org.eclipse.sisu.inject:0.3.2" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-component-annotations:1.5.5" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-classworlds:2.5.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.maven.plugin-tools:maven-plugin-annotations:3.4" level="project" />
+    <orderEntry type="library" name="Maven: com.geirsson:scalafmt-cli_2.11:0.2.12" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang:scala-library:2.11.8" level="project" />
+    <orderEntry type="library" name="Maven: com.geirsson:scalafmt-core_2.11:0.2.12" level="project" />
+    <orderEntry type="library" name="Maven: com.lihaoyi:sourcecode_2.11:0.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.scalameta:scalameta_2.11:0.1.0-RC1" level="project" />
+    <orderEntry type="library" name="Maven: org.scalameta:foundation_2.11:0.1.0-RC1" level="project" />
+    <orderEntry type="library" name="Maven: org.scalameta:dialects_2.11:0.1.0-RC1" level="project" />
+    <orderEntry type="library" name="Maven: org.scalameta:parsers_2.11:0.1.0-RC1" level="project" />
+    <orderEntry type="library" name="Maven: org.scalameta:tokens_2.11:0.1.0-RC1" level="project" />
+    <orderEntry type="library" name="Maven: org.scalameta:prettyprinters_2.11:0.1.0-RC1" level="project" />
+    <orderEntry type="library" name="Maven: org.scalameta:quasiquotes_2.11:0.1.0-RC1" level="project" />
+    <orderEntry type="library" name="Maven: org.scalameta:tokenizers_2.11:0.1.0-RC1" level="project" />
+    <orderEntry type="library" name="Maven: com.lihaoyi:scalaparse_2.11:0.3.7" level="project" />
+    <orderEntry type="library" name="Maven: com.lihaoyi:fastparse_2.11:0.3.7" level="project" />
+    <orderEntry type="library" name="Maven: com.lihaoyi:fastparse-utils_2.11:0.3.7" level="project" />
+    <orderEntry type="library" name="Maven: org.scalameta:tql_2.11:0.1.0-RC1" level="project" />
+    <orderEntry type="library" name="Maven: org.scalameta:trees_2.11:0.1.0-RC1" level="project" />
+    <orderEntry type="library" name="Maven: org.scalameta:inputs_2.11:0.1.0-RC1" level="project" />
+    <orderEntry type="library" name="Maven: org.scalariform:scalariform_2.11:0.1.8" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-xml_2.11:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: com.geirsson:scalafmt-macros_2.11:0.2.12" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang:scala-compiler:2.11.8" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang:scala-reflect:2.11.8" level="project" />
+    <orderEntry type="library" name="Maven: com.github.scopt:scopt_2.11:3.3.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
+  </component>
+</module>

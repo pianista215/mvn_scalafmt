@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.geirsson</groupId>
+    <artifactId>mvn-scalafmt</artifactId>
+    <packaging>maven-plugin</packaging>
+    <version>1.0.0</version>
+    <name>Scala FMT Maven Plugin</name>
+    <url>https://olafurpg.github.io/scalafmt/</url>
+
+    <properties>
+        <maven.version>3.3.9</maven.version>
+        <maven.annotations.version>3.4</maven.annotations.version>
+        <scalafmt.version>0.2.12</scalafmt.version>
+    </properties>
+
+    <dependencies>
+        <!--Develop-->
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-plugin-api</artifactId>
+            <version>${maven.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugin-tools</groupId>
+            <artifactId>maven-plugin-annotations</artifactId>
+            <version>${maven.annotations.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.geirsson</groupId>
+            <artifactId>scalafmt-cli_2.11</artifactId>
+            <version>${scalafmt.version}</version>
+        </dependency>
+
+        <!--Test-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
