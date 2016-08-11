@@ -8,6 +8,15 @@
     <name>Scala FMT Maven Plugin (Not official)</name>
     <url>https://github.com/pianista215/mvn_scalafmt/</url>
 
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://github.com/pianista215/mvn_scalafmt/blob/master/LICENSE.md</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+
     <properties>
         <maven.version>3.3.9</maven.version>
         <maven.annotations.version>3.4</maven.annotations.version>
