@@ -1,7 +1,6 @@
 package com.devsmobile;
 
 
-import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
@@ -17,15 +16,15 @@ import java.util.List;
 @Mojo(name = "verify")
 public class VerifyFormatMojo extends MyAbstractMojo {
 
-    @Parameter(property = "verify.scalaFmtParameters", defaultValue = "--test -f .")
-    private String scalafmtParameters;
+    @Parameter(property = "verify.verifyParameters", defaultValue = "--test -f .")
+    private String verifyParameters;
 
 
     private String folder;
 
     public void execute() throws MojoExecutionException {
 
-        getLog().info("Checking format with: " + scalafmtParameters);
+        getLog().info("Checking format with: " + verifyParameters);
 
         try {
 
@@ -35,7 +34,7 @@ public class VerifyFormatMojo extends MyAbstractMojo {
             }
 
             List<String> parameters = new ArrayList<String>(Arrays.asList("java", "-jar", getFinalPathToScalaFmt()));
-            parameters.addAll(Arrays.asList(scalafmtParameters.split(" ")));
+            parameters.addAll(Arrays.asList(verifyParameters.split(" ")));
 
             Process ps = Runtime.getRuntime().exec(parameters.toArray(new String[parameters.size()]));
             ps.waitFor();

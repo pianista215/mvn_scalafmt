@@ -1,7 +1,6 @@
 package com.devsmobile;
 
 
-import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
@@ -17,12 +16,12 @@ import java.util.List;
 @Mojo(name = "format")
 public class FormatMojo extends MyAbstractMojo {
 
-    @Parameter(property = "format.scalaFmtParameters", defaultValue = "-i -f .")
-    private String scalafmtParameters;
+    @Parameter(property = "format.formatParameters", defaultValue = "-i -f .")
+    private String formatParameters;
 
     public void execute() throws MojoExecutionException {
 
-        getLog().info("Formatting with options: " + scalafmtParameters);
+        getLog().info("Formatting with options: " + formatParameters);
 
         try {
             if (!existsScalaFmtInPath()) {
@@ -30,7 +29,7 @@ public class FormatMojo extends MyAbstractMojo {
             }
 
             List<String> parameters = new ArrayList<String>(Arrays.asList("java", "-jar", getFinalPathToScalaFmt()));
-            parameters.addAll(Arrays.asList(scalafmtParameters.split(" ")));
+            parameters.addAll(Arrays.asList(formatParameters.split(" ")));
 
             Process ps = Runtime.getRuntime().exec(parameters.toArray(new String[parameters.size()]));
             ps.waitFor();
