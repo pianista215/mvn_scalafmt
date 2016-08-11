@@ -34,13 +34,22 @@ public class FormatMojo extends MyAbstractMojo {
 
             Process ps = Runtime.getRuntime().exec(parameters.toArray(new String[parameters.size()]));
             ps.waitFor();
-            java.io.InputStream is = ps.getInputStream();
-            byte b[] = new byte[is.available()];
-            is.read(b, 0, b.length);
-            getLog().info(new String(b));
-            getLog().info("Format finished");
 
-            //TODO: Number
+            if (ps.exitValue() == 0) {
+                java.io.InputStream is = ps.getInputStream();
+                byte b[] = new byte[is.available()];
+                is.read(b, 0, b.length);
+                getLog().debug(new String(b));
+                getLog().info("Format finished");
+            } else {
+                InputStream is = ps.getErrorStream();
+                byte b[] = new byte[is.available()];
+                is.read(b, 0, b.length);
+                String errorMsg = new String(b);
+                throw new MojoExecutionException("Error formatting scala code:" + errorMsg);
+            }
+
+
         } catch (Exception e) {
             throw new MojoExecutionException("Error formatting Scala files", e);
         }

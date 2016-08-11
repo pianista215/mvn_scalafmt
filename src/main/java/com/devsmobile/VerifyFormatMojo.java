@@ -44,7 +44,7 @@ public class VerifyFormatMojo extends MyAbstractMojo {
                 InputStream is = ps.getInputStream();
                 byte b[] = new byte[is.available()];
                 is.read(b, 0, b.length);
-                getLog().info(new String(b));
+                getLog().debug(new String(b));
                 getLog().info("Format checked");
             } else {
                 InputStream is = ps.getErrorStream();
