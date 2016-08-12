@@ -15,13 +15,14 @@ public abstract class MyAbstractMojo extends AbstractMojo {
 
     /**
      * Copy scalafmt.jar to HOME based on Operating System if not exists
+     *
      * @throws IOException
      */
     protected void copyJarToHome() throws IOException {
 
         //Check Folder exists
         File basePath = new File(getBasePath());
-        if(!basePath.exists()){
+        if (!basePath.exists()) {
             basePath.mkdir();
         }
 
@@ -34,7 +35,7 @@ public abstract class MyAbstractMojo extends AbstractMojo {
 
         int length;
         //copy the file content in bytes
-        while ((length = is.read(buffer)) > 0){
+        while ((length = is.read(buffer)) > 0) {
             os.write(buffer, 0, length);
         }
 
@@ -42,26 +43,36 @@ public abstract class MyAbstractMojo extends AbstractMojo {
         os.close();
     }
 
+    /**
+     * Checks if Scalafmt exists in the HOME/.scalafmt folder
+     *
+     * @return
+     */
     protected boolean existsScalaFmtInPath() {
         File expected = new File(getFinalPathToScalaFmt());
         return expected.exists();
     }
 
     protected String getBasePath() {
-        if(OSValidator.isWindows()){
+        if (OSValidator.isWindows()) {
             throw new RuntimeException("Not supported");
-        } else if(OSValidator.isUnix()){
+        } else if (OSValidator.isUnix()) {
             String homePath = System.getProperty("user.home");
             return homePath + File.separator + ".scalafmt";
-        } else if(OSValidator.isMac()){
+        } else if (OSValidator.isMac()) {
             throw new RuntimeException("Not supported");
-        } else if(OSValidator.isSolaris()){
+        } else if (OSValidator.isSolaris()) {
             throw new RuntimeException("Not supported");
         } else {
             throw new RuntimeException("Can't find running Operating System");
         }
     }
 
+    /**
+     * Return the final path to ScalaFmt (HOME/.scalafmt/scalafmt.jar)
+     *
+     * @return
+     */
     protected String getFinalPathToScalaFmt() {
         return getBasePath() + File.separator + "scalafmt.jar";
     }
