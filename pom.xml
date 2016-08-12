@@ -6,6 +6,7 @@
     <packaging>maven-plugin</packaging>
     <version>0.2.11</version>
     <name>Scala FMT Maven Plugin (Not official)</name>
+    <description>Wrapper for official ScalaFMT formatter to use in Maven</description>
     <url>https://github.com/pianista215/mvn_scalafmt/</url>
 
     <licenses>
@@ -16,6 +17,20 @@
         </license>
     </licenses>
 
+    <developers>
+        <developer>
+            <name>Unai Sarasola</name>
+            <email>unaisarasolaalvarez@gmail.com</email>
+            <organization>DevsMobile</organization>
+            <organizationUrl>http://www.devsmobile.com</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/pianista215/mvn_scalafmt</url>
+        <connection>scm:git:git://github.com/pianista215/mvn_scalafmt.git</connection>
+        <developerConnection>scm:git:git@github.com:pianista215/mvn_scalafmt.git</developerConnection>
+    </scm>
 
     <properties>
         <maven.version>3.3.9</maven.version>
