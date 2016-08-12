@@ -19,7 +19,6 @@ public class VerifyFormatMojo extends MyAbstractMojo {
     @Parameter(property = "verify.verifyParameters", defaultValue = "--test -f .")
     private String verifyParameters;
 
-
     private String folder;
 
     public void execute() throws MojoExecutionException {
