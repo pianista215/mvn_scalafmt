@@ -38,7 +38,7 @@ Or
     <execution>
       <phase>validate</phase>
       <goals>
-        <goal>compile</goal>
+        <goal>verify</goal>
       </goals>
     </execution>
   </executions>
